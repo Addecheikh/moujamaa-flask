@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>📷 معرض الصور والفيديو - قرية المجمّع</h2>
+
+<p style="font-size: 18px; margin-bottom: 20px;">
+    نشارككم بعض الصور والمقاطع المصورة التي تعكس جمال قرية المجمّع وطبيعتها وأجوائها التقليدية.
+</p>
+
+<!-- الصور -->
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 40px;">
+    <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="صورة 1" style="width: 300px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+    <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="صورة 2" style="width: 300px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+    <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="صورة 3" style="width: 300px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+    <img src="{{ url_for('static', filename='images/photo4.jpg') }}" alt="صورة 4" style="width: 300px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+    <img src="{{ url_for('static', filename='images/photo5.jpg') }}" alt="صورة 5" style="width: 300px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+    <img src="{{ url_for('static', filename='images/photo6.jpg') }}" alt="صورة 6" style="width: 300px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+</div>
+
+<!-- الفيديوهات -->
+<h3 style="text-align: center; margin-top: 20px; color: #007B5E;">🎬 مقاطع فيديو من المجمّع</h3>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px;">
+    <video controls style="width: 320px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+        <source src="{{ url_for('static', filename='videos/video1.mp4') }}" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+
+    <video controls style="width: 320px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+        <source src="{{ url_for('static', filename='videos/video2.mp4') }}" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+    <video controls style="width: 320px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+        <source src="{{ url_for('static', filename='videos/video3.mp4') }}" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+</div>
+
+{% endblock %}

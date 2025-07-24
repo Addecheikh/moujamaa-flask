@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div style="text-align: center; margin-bottom: 40px;">
+    <h2 style="color: #007B5E; font-size: 32px;">📜 تاريخ ونشأة <span style="color: #e67e22;">قرية المجمّع</span></h2>
+    <hr style="width: 60px; height: 4px; background-color: #007B5E; border: none; margin: 10px auto;">
+</div>
+
+<div style="font-size: 18px; line-height: 1.9; color: #333;">
+    <p>
+        في الأول من أكتوبر سنة <strong>2012</strong>، تأسست "<strong>قرية المجمّع</strong>"، بعد أن انتقل سكانها من منطقتي <strong>البيجوج</strong> و<strong>اجيمّامه</strong>، حيث استقروا في موقعها الحالي.
+    </p>
+
+    <p>
+        ينتمي سكان القرية إلى
+        <span style="
+            display: inline-block;
+            background: linear-gradient(135deg, #fef9e7, #eafaf1);
+            padding: 8px 16px;
+            border: 2px dotted #d35400;
+            border-radius: 12px;
+            font-weight: bold;
+            color: #c0392b;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
+            قبيلة <span style="color:#2980b9;">أسواكر</span> (<span style="color:#16a085;">أهل امحي</span>)
+        </span>،
+        وقد جاء تأسيس القرية في إطار حركة الاستقرار القروي التي شهدتها البلاد خلال العقدين الأخيرين.
+    </p>
+
+    <p>
+        تقع <strong>قرية المجمّع</strong> في موقع جغرافي استراتيجي بين ولاية <strong>لعصابه</strong> (كيفة) ومقاطعة <strong>الطينطان</strong>، حيث تبعد حوالي <strong>90 كلم²</strong> عن مدينة كيفة و<strong>50 كلم²</strong> تقريبًا عن الطينطان، بمحاذاة <strong>طريق الأمل</strong>، أحد أهم الطرق الوطنية.
+    </p>
+
+    <p>
+        تمتاز القرية بطبيعة خلابة وجبال عالية، تضفي على المكان سحرًا خاصًا يجمع بين هدوء البادية وروعة المشهد الطبيعي، مما يجعلها واحدة من أجمل المناطق في البلاد من حيث الموقع والطبيعة.
+    </p>
+</div>
+
+<!-- صور الخريطة -->
+<div style="text-align: center; margin-top: 40px;">
+    <h3 style="color: #007B5E;">📍 الموقع الجغرافي لقرية المجمّع</h3>
+    <img src="{{ url_for('static', filename='images/carte.png') }}" alt="خريطة موقع قرية المجمع" style="width: 100%; max-width: 800px; margin: 20px auto; display: block; border-radius: 12px; box-shadow: 0 0 12px rgba(0,0,0,0.1);">
+
+    <img src="{{ url_for('static', filename='images/carte2.png') }}" alt="خريطة موقع قرية المجمع 2" style="width: 100%; max-width: 800px; margin: 20px auto; display: block; border-radius: 12px; box-shadow: 0 0 12px rgba(0,0,0,0.1);">
+</div>
+{% endblock %}

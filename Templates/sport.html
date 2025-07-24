@@ -1,0 +1,86 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<style>
+    .fc-section {
+        background-image: url("{{ url_for('static', filename='images/sport-bg.jg') }}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        color: #fff;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .fc-section h2, .fc-section h3 {
+        color: #ffdd57;
+        text-shadow: 1px 1px 3px #000;
+    }
+
+    .fc-paragraph {
+        font-size: 18px;
+        margin: 20px auto;
+        line-height: 1.9;
+        text-align: justify;
+        max-width: 800px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 12px;
+        color: #fff;
+    }
+
+    .fc-gallery img, .fc-videos video {
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .club-logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+</style>
+
+<div class="fc-section">
+
+    <!-- شعار النادي -->
+    <img src="{{ url_for('static', filename='images/logo.webp') }}" alt="شعار النادي" class="club-logo">
+
+    <!-- اسم النادي -->
+    <h2>⚽ FC. CHEBAB – نادي شباب المجمّع الرياضي</h2>
+
+    <!-- الفقرة المدمجة -->
+    <div class="fc-paragraph">
+        يُعد نادي <strong>FC. CHEBAB</strong> إحدى العلامات البارزة في قرية المجمّع، إذ يجمع بين حب الرياضة وروح الجماعة. تأسّس على يد ثلة من شباب القرية، مدفوعين بطموحهم وإيمانهم بدور الرياضة في تعزيز الانتماء وتقوية الروابط المجتمعية. ويضم النادي نخبة من اللاعبين الشباب الموهوبين، الذين يمثّلون القرية في البطولات المحلية والمباريات الودية، رافعين اسم المجمّع بكل فخر، ومجسّدين قيم الالتزام، والتعاون، والتحدي الشريف.
+    </div>
+
+    <!-- الصور -->
+    <h3 style="margin-top: 40px;">📸 صور من نشاطات الفريق</h3>
+    <div class="fc-gallery" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 25px;">
+        <img src="{{ url_for('static', filename='images/sport1.jpg') }}" alt="صورة 1">
+        <img src="{{ url_for('static', filename='images/sport2.jpg') }}" alt="صورة 2">
+        <img src="{{ url_for('static', filename='images/sport3.jpg') }}" alt="صورة 3">
+        <img src="{{ url_for('static', filename='images/sport4.jpg') }}" alt="صورة 4">
+        <img src="{{ url_for('static', filename='images/sport5.jpg') }}" alt="صورة 5">
+    </div>
+
+    <!-- الفيديوهات -->
+    <h3 style="margin-top: 50px;">🎥 فيديوهات من مباريات وتدريبات الفريق</h3>
+    <div class="fc-videos" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px;">
+        <video controls>
+            <source src="{{ url_for('static', filename='videos/fc1.mp4') }}" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+
+        <video controls>
+            <source src="{{ url_for('static', filename='videos/fc2.mp4') }}" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<style>
+    .quote-box {
+        background-color: #f9f9f9;
+        border: 2px solid #007B5E;
+        padding: 20px;
+        border-radius: 12px;
+        font-size: 18px;
+        line-height: 1.9;
+        color: #333;
+        margin-bottom: 30px;
+        position: relative;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+    }
+
+    .quote-box::before {
+        content: "❝";
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        font-size: 36px;
+        color: #007B5E;
+    }
+
+    .quote-box::after {
+        content: "❞";
+        position: absolute;
+        bottom: -15px;
+        right: -15px;
+        font-size: 36px;
+        color: #007B5E;
+    }
+</style>
+
+<h2 style="color: #007B5E; text-align: center;">🕌 المسجد والمحظرة في قرية المجمّع</h2>
+<hr style="width: 60px; height: 3px; background-color: #007B5E; border: none; margin: 10px auto;">
+
+<div class="quote-box">
+    <p>
+        قال الله تعالى: <strong>«إِنَّمَا يَعْمُرُ مَسَاجِدَ اللَّهِ مَنْ آمَنَ بِاللَّهِ وَالْيَوْمِ الْآخِرِ…»</strong>
+        <span style="color: #555;">[سورة التوبة، الآية 18]</span><br><br>
+
+        وقال تعالى: <strong>«يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنْكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ…»</strong>
+        <span style="color: #555;">[سورة المجادلة، الآية 11]</span><br><br>
+
+        وقال رسول الله ﷺ: <strong>«خيركم من تعلّم القرآن وعلّمه»</strong>
+        <span style="color: #555;">[رواه البخاري]</span>
+    </p>
+</div>
+
+<p style="font-size: 18px; line-height: 1.9; text-align: justify;">
+    وفي <strong>قرية المجمّع</strong>، يتجلى أثر هذه المعاني في مشهد روحاني نابض، حيث يُشكّل المسجد القلب الحي للحياة الدينية، محرابًا للصلاة، ومنبرًا للخطبة، وملتقى للأهالي في الجمع والأعياد والتراويح.
+</p>
+
+<p style="font-size: 18px; line-height: 1.9; text-align: justify;">
+    وبمحاذاته، تضيء <strong>المحظرة</strong> كمنارةٍ للعلم والإيمان، يُرتشف فيها من معين القرآن الكريم والعلوم الشرعية، وتُخرّج فيها أجيالٌ تربت على حبّ العلم وتعظيم القرآن.
+</p>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;">
+    <img src="{{ url_for('static', filename='images/masjid.jpg') }}" alt="صورة المسجد" style="width: 45%; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+    <img src="{{ url_for('static', filename='images/masjid2.jpg') }}" alt="صورة المحظرة" style="width: 45%; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+</div>
+
+
+{% endblock %}

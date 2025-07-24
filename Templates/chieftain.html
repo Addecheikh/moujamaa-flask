@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+    body {
+        background-image: url("{{ url_for('static', filename='images/pattern.png') }}");
+        background-size: 400px;
+        background-repeat: repeat;
+        font-family: 'Amiri', serif;
+    }
+
+    .heritage-box {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 15px;
+        border: 3px double #c49b16;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        position: relative;
+    }
+
+    .heritage-box::before,
+    .heritage-box::after {
+        content: "۞";
+        position: absolute;
+        font-size: 28px;
+        color: #c49b16;
+    }
+
+    .heritage-box::before {
+        top: -18px;
+        right: -18px;
+    }
+
+    .heritage-box::after {
+        bottom: -18px;
+        left: -18px;
+    }
+
+    .heritage-title {
+        color: #007B5E;
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .heritage-quote-colored {
+        background-color: #fff9e6;
+        border: 2px solid #f0c542;
+        border-radius: 12px;
+        padding: 15px 20px;
+        margin-top: 30px;
+        font-style: italic;
+        font-size: 18px;
+        text-align: center;
+        color: #7a5c00;
+        box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+</style>
+
+<div class="heritage-box">
+    <h2 class="heritage-title">👳‍♂️ شياخة قرية المجمّع</h2>
+    <hr style="width: 60px; height: 3px; background-color: #007B5E; border: none; margin: 10px auto;">
+
+    <p style="font-size: 18px; line-height: 1.9; text-align: justify;">
+        تولّت <strong>أسرة أهل احميد</strong> مقام الشياخة في قرية المجمّع عبر أجيال، وبفضل الله وورعهم، بقيت الشياخة رمزًا للصدق، والوقار، والأمانة.
+    </p>
+
+    <p style="font-size: 18px; line-height: 1.9; text-align: justify;">
+        آخرهم المغفور له بإذن الله <strong>سيدي محمود ولد محمد الأمين ولد احميد (يبّه)</strong> الذي وافته المنية في <strong>13 مايو 2024</strong>، بعد أن  سار على خُطى أسلافه من ذات الأسرة، متمسكًا بالإرث ومواصلًا المسير بعزمٍ لا يلين، الذين حملوا تلك المسؤولية بشرف.
+    </p>
+
+    <p style="font-size: 18px; line-height: 1.9; text-align: justify;">
+        واصل الإبن الأكبر، <strong>محمد محمود</strong>، هذه المسيرة بعزم وحكمة، لتستمر شياخة القرية نبراسًا للهدى والعدل.
+    </p>
+
+    <div class="heritage-quote-colored">
+        "من حمل الشياخة بحق، لبس ثوب الوقار ومشى بين الناس بسكينة."
+    </div>
+</div>
+{% endblock %}

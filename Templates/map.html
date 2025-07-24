@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2 style="text-align: center; color: #007B5E; margin-bottom: 20px;">📍 الموقع الجغرافي لقرية المجمّع</h2>
+
+<div style="text-align: center;">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.709944328606!2d-10.599079500000002!3d16.490218400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe601d001798ae1f%3A0xa9d68af46d2e9183!2z2KfZhNiq2KzZhdi5INij2KzZitmF2YXYp9iq!5e0!3m2!1sfr!2s!4v1753369858816!5m2!1sfr!2s"
+        width="100%"
+        height="450"
+        style="border:0; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 900px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <p style="margin-top: 15px;">
+        <a href="https://maps.app.goo.gl/de6BnPjTVxw7HuSr5?g_st=ipc"
+           target="_blank"
+           style="color: #e67e22; font-weight: bold; text-decoration: none;">
+            📍 افتح الموقع مباشرة في Google Maps
+        </a>
+    </p>
+</div>
+{% endblock %}
